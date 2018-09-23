@@ -1,5 +1,7 @@
 # Letsencrypt Cloudflare Issuer
 
+> lscf.sh uses needs docker to run
+
 Script enables combining certificates issueing and cname management.
 For the certificate issuing letsencript [acme.sh]
 script is used and for the cname management and for the dns issuing cloudflare is used.
@@ -7,6 +9,9 @@ script is used and for the cname management and for the dns issuing cloudflare i
 ## Issue certificate
 
 ```bash
+export CLOUDFLARE_USERNAME=xxxx@xxxx.xx
+export CLOUDFLARE_TOKEN=xxxxxx
+
 lscf.sh -d app1.example.ch -s beta.server.example.ch
 ```
 
