@@ -2,10 +2,6 @@ import pytest
 import os
 from importlib import reload
 
-class A:
-    def doIt():
-      return False
-
 def test_load_config_from_env(mocker):
     mocker.patch('os.environ', {
         "CLOUDFLARE_USERNAME": "test@example.ch",
